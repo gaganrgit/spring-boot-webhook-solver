@@ -27,6 +27,8 @@ Requirements: JDK 17+, Maven
 
 ```bash
 mvn clean package
+<img width="1800" height="1136" alt="Screenshot 2025-11-11 155147" src="https://github.com/user-attachments/assets/f2528136-01f8-44e1-a515-8f48ce07a8c2" />
+
 java -jar target/webhook-solver-1.0.0.jar
 ```
 
