@@ -1,0 +1,4 @@
+com\example\webhooksolver\config\RestConfig.class
+com\example\webhooksolver\service\WebhookService.class
+com\example\webhooksolver\WebhookSolverApplication.class
+com\example\webhooksolver\model\WebhookResponse.class
