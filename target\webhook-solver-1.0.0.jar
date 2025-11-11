@@ -1,0 +1,44 @@
+PS C:\Users\Gagan R\Downloads\spring-boot-webhook-solver> java -jar target\webhook-solver-1.0.0.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-11-11T15:47:19.456+05:30  INFO 8224 --- [           main] c.e.w.WebhookSolverApplication           : Starting WebhookSolverApplication using Java 24.0.2 with PID 8224 (C:\Users\Gagan R\Downloads\spring-boot-webhook-solver\target\webhook-solver-1.0.0.jar started by Gagan R in C:\Users\Gagan R\Downloads\spring-boot-webhook-solver)
+2025-11-11T15:47:19.459+05:30  INFO 8224 --- [           main] c.e.w.WebhookSolverApplication           : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (jar:nested:/C:/Users/Gagan R/Downloads/spring-boot-webhook-solver/target/webhook-solver-1.0.0.jar/!BOOT-INF/lib/tomcat-embed-core-10.1.16.jar!/)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2025-11-11T15:47:20.213+05:30  INFO 8224 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-11T15:47:20.220+05:30  INFO 8224 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-11T15:47:20.220+05:30  INFO 8224 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-11-11T15:47:20.252+05:30  INFO 8224 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-11T15:47:20.253+05:30  INFO 8224 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 733 ms        
+2025-11-11T15:47:20.550+05:30  INFO 8224 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-11-11T15:47:20.563+05:30  INFO 8224 --- [           main] c.e.w.WebhookSolverApplication           : Started WebhookSolverApplication in 1.432 seconds (process running for 1.745)
+2025-11-11T15:47:20.565+05:30  INFO 8224 --- [           main] c.e.w.service.WebhookService             : Starting webhook generation flow...
+2025-11-11T15:47:21.127+05:30  INFO 8224 --- [           main] c.e.w.service.WebhookService             : Received webhook: https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA
+2025-11-11T15:47:21.128+05:30  INFO 8224 --- [           main] c.e.w.service.WebhookService             : Determined regNo last two digits: 65 (odd? true) -> question: https://drive.google.com/file/d/1IeSI6l6KoSQAFfRihIT9tEDICtoz-G/view?usp=sharing
+2025-11-11T15:47:21.129+05:30  INFO 8224 --- [           main] c.e.w.service.WebhookService             : Saved final query to C:\Users\Gagan R\Downloads\spring-boot-webhook-solver\finalQuery.sql
+2025-11-11T15:47:21.194+05:30 ERROR 8224 --- [           main] c.e.w.service.WebhookService             : Failed to submit final query to webhook
+
+org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]
+        at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:106) ~[spring-web-6.1.1.jar!/:6.1.1]
+        at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183) ~[spring-web-6.1.1.jar!/:6.1.1]
+        at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137) ~[spring-web-6.1.1.jar!/:6.1.1]
+        at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-6.1.1.jar!/:6.1.1]
+        at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:932) ~[spring-web-6.1.1.jar!/:6.1.1]
+        at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:881) ~[spring-web-6.1.1.jar!/:6.1.1]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+        at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91) ~[webhook-solver-1.0.0.jar:na]
+        at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53) ~[webhook-solver-1.0.0.jar:na]
+        at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58) ~[webhook-solver-1.0.0.jar:na]
+
+2025-11-11T15:47:21.197+05:30  INFO 8224 --- [           main] c.e.w.service.WebhookService             : Flow completed.
